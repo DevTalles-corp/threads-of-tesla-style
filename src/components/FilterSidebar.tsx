@@ -32,35 +32,7 @@ const FilterSidebar = () => {
     <div className="w-64 space-y-6">
       <div>
         <h3 className="font-semibold text-lg mb-4">Filtros</h3>
-        <Button variant="outline" size="sm" className="w-full">
-          Limpiar Filtros
-        </Button>
       </div>
-
-      <Separator />
-
-      {/* Categories */}
-      <div className="space-y-4">
-        <h4 className="font-medium">Categorías</h4>
-        <div className="space-y-3">
-          {categories.map((category) => (
-            <div key={category.id} className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <Checkbox id={category.id} />
-                <label
-                  htmlFor={category.id}
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
-                >
-                  {category.label}
-                </label>
-              </div>
-              <span className="text-xs text-muted-foreground">({category.count})</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <Separator />
 
       {/* Sizes */}
       <div className="space-y-4">
@@ -75,23 +47,6 @@ const FilterSidebar = () => {
             >
               {size.label}
             </Button>
-          ))}
-        </div>
-      </div>
-
-      <Separator />
-
-      {/* Colors */}
-      <div className="space-y-4">
-        <h4 className="font-medium">Colores</h4>
-        <div className="space-y-3">
-          {colors.map((color) => (
-            <div key={color.id} className="flex items-center space-x-3">
-              <div className={`w-5 h-5 rounded-full ${color.color}`} />
-              <label className="text-sm font-medium cursor-pointer">
-                {color.label}
-              </label>
-            </div>
           ))}
         </div>
       </div>
