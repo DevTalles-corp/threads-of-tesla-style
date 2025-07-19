@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
 
 const FilterSidebar = () => {
   const categories = [
@@ -99,24 +101,24 @@ const FilterSidebar = () => {
       {/* Price Range */}
       <div className="space-y-4">
         <h4 className="font-medium">Precio</h4>
-        <div className="space-y-3">
+        <RadioGroup defaultValue="" className="space-y-3">
           <div className="flex items-center space-x-2">
-            <Checkbox id="price1" />
-            <label htmlFor="price1" className="text-sm">$0 - $50</label>
+            <RadioGroupItem value="0-50" id="price1" />
+            <Label htmlFor="price1" className="text-sm cursor-pointer">$0 - $50</Label>
           </div>
           <div className="flex items-center space-x-2">
-            <Checkbox id="price2" />
-            <label htmlFor="price2" className="text-sm">$50 - $100</label>
+            <RadioGroupItem value="50-100" id="price2" />
+            <Label htmlFor="price2" className="text-sm cursor-pointer">$50 - $100</Label>
           </div>
           <div className="flex items-center space-x-2">
-            <Checkbox id="price3" />
-            <label htmlFor="price3" className="text-sm">$100 - $200</label>
+            <RadioGroupItem value="100-200" id="price3" />
+            <Label htmlFor="price3" className="text-sm cursor-pointer">$100 - $200</Label>
           </div>
           <div className="flex items-center space-x-2">
-            <Checkbox id="price4" />
-            <label htmlFor="price4" className="text-sm">$200+</label>
+            <RadioGroupItem value="200+" id="price4" />
+            <Label htmlFor="price4" className="text-sm cursor-pointer">$200+</Label>
           </div>
-        </div>
+        </RadioGroup>
       </div>
     </div>
   );
