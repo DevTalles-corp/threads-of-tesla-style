@@ -103,6 +103,10 @@ const FilterSidebar = () => {
         <h4 className="font-medium">Precio</h4>
         <RadioGroup defaultValue="" className="space-y-3">
           <div className="flex items-center space-x-2">
+            <RadioGroupItem value="any" id="priceAny" />
+            <Label htmlFor="priceAny" className="text-sm cursor-pointer">Cualquier precio</Label>
+          </div>
+          <div className="flex items-center space-x-2">
             <RadioGroupItem value="0-50" id="price1" />
             <Label htmlFor="price1" className="text-sm cursor-pointer">$0 - $50</Label>
           </div>
